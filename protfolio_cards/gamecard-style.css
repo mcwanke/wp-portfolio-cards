@@ -1,0 +1,391 @@
+/* ============================================
+   PORTFOLIO GAMECARD SYSTEM — GLOBAL
+   ============================================ */
+
+.portfolio-gamecard {
+  width: 360px;
+  height: 737px;
+  border-radius: 20px;
+  padding: 10px;
+  font-family: sans-serif;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  background: var(--pgc-card-bg);
+  border: 3px solid var(--pgc-accent);
+}
+
+.portfolio-gamecard::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(115deg, transparent 20%, rgba(255,255,255,0.07) 40%, rgba(255,255,255,0.12) 50%, rgba(255,255,255,0.07) 60%, transparent 80%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.portfolio-gamecard:hover::before {
+  opacity: 1;
+}
+
+.portfolio-gamecard-inner {
+  border: 1px solid var(--pgc-accent-inner);
+  border-radius: 14px;
+  padding: 8px;
+  position: relative;
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.portfolio-gamecard-inner::before {
+  content: '';
+  position: absolute;
+  inset: 3px;
+  border: 1px solid var(--pgc-accent-bg);
+  border-radius: 11px;
+  pointer-events: none;
+}
+
+.portfolio-gamecard-corner {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-color: var(--pgc-accent);
+  border-style: solid;
+  opacity: 0.75;
+}
+
+.portfolio-gamecard-title-bar {
+  height: 70px;
+  background: var(--pgc-bar-bg);
+  border: 1px solid var(--pgc-accent-border);
+  border-radius: 8px;
+  padding: 6px 10px;
+  margin-bottom: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  gap: 8px;
+}
+
+.portfolio-gamecard-title {
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  line-height: 1.2;
+  max-width: 50%;
+  word-wrap: break-word;
+  color: var(--pgc-title-color);
+}
+
+.portfolio-gamecard-cost-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+  max-width: 50%;
+}
+
+.portfolio-gamecard-cost-label {
+  font-size: 10px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--pgc-accent-dim);
+}
+
+.portfolio-gamecard-cost-tag {
+  border-radius: 10px;
+  padding: 1px 8px;
+  font-size: 11px;
+  white-space: nowrap;
+  display: block;
+  text-align: center;
+  background: var(--pgc-accent-bg);
+  border: 1px solid var(--pgc-accent-tag);
+  color: var(--pgc-accent);
+}
+
+.portfolio-gamecard-art {
+  height: 200px;
+  border-radius: 8px;
+  margin-bottom: 6px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  border: 2px solid var(--pgc-accent);
+}
+
+.portfolio-gamecard-art::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--pgc-accent), transparent);
+  z-index: 2;
+}
+
+.portfolio-gamecard-art::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--pgc-accent), transparent);
+  z-index: 2;
+}
+
+.portfolio-gamecard-art-bg {
+  position: absolute;
+  inset: 0;
+  background: var(--pgc-art-bg);
+}
+
+.portfolio-gamecard-art-inner {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 8px;
+  z-index: 1;
+}
+
+.portfolio-gamecard-ornament {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px dashed var(--pgc-accent-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.portfolio-gamecard-ornament-inner {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--pgc-accent-bg);
+  border: 1px solid var(--pgc-accent-border);
+}
+
+.portfolio-gamecard-art-label {
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  color: var(--pgc-accent-dim);
+}
+
+.portfolio-gamecard-type-bar {
+  height: 34px;
+  background: var(--pgc-bar-bg);
+  border: 1px solid var(--pgc-accent-border);
+  border-radius: 6px;
+  padding: 0 10px;
+  margin-bottom: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+
+.portfolio-gamecard-type-main {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  color: var(--pgc-accent);
+}
+
+.portfolio-gamecard-type-sub {
+  font-size: 13px;
+  font-weight: 700;
+  font-style: italic;
+  color: var(--pgc-accent);
+}
+
+.portfolio-gamecard-rules {
+  height: 322px;
+  background: var(--pgc-accent-bg);
+  border: 1px solid var(--pgc-accent-border);
+  border-radius: 8px;
+  padding: 12px 14px;
+  margin-bottom: 6px;
+  position: relative;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.portfolio-gamecard-rules::before {
+  content: '';
+  position: absolute;
+  top: 4px; left: 4px; right: 4px; bottom: 4px;
+  border: 1px solid var(--pgc-accent-bg);
+  border-radius: 5px;
+  pointer-events: none;
+}
+
+.portfolio-gamecard-effect {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.5;
+  margin-bottom: 10px;
+  color: var(--pgc-effect-color);
+}
+
+.portfolio-gamecard-effect-label {
+  font-size: 12px;
+  font-weight: 500;
+  margin-right: 4px;
+  color: var(--pgc-accent);
+}
+
+.portfolio-gamecard-desc {
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--pgc-desc-color);
+}
+
+.portfolio-gamecard-flavor-anchor {
+  position: absolute;
+  bottom: 12px;
+  left: 14px;
+  right: 14px;
+}
+
+.portfolio-gamecard-divider {
+  border: none;
+  border-top: 1px solid var(--pgc-accent-subtle);
+  margin: 0 0 8px 0;
+}
+
+.portfolio-gamecard-flavor {
+  font-size: 12px;
+  line-height: 1.5;
+  font-style: italic;
+  text-align: right;
+  color: var(--pgc-accent);
+}
+
+.portfolio-gamecard-footer {
+  height: 40px;
+  background: var(--pgc-bar-bg);
+  border: 1px solid var(--pgc-accent-border);
+  border-radius: 6px;
+  padding: 0 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+
+.portfolio-gamecard-logo {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 0px solid var(--pgc-accent);
+  background: var(--pgc-accent-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.portfolio-gamecard-logo-text {
+  font-size: 9px;
+  font-weight: 500;
+  color: var(--pgc-accent);
+}
+
+.portfolio-gamecard-logo img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+.portfolio-gamecard-pt {
+  font-size: 11px;
+  font-weight: 500;
+  padding: 3px 10px;
+  border-radius: 4px;
+  color: var(--pgc-title-color);
+  background: var(--pgc-accent-bg);
+  border: 1px solid var(--pgc-accent-border);
+}
+
+/* ============================================
+   VARIANTS
+   ============================================ */
+
+.variant-blue {
+  --pgc-accent:        #C4A35A;
+  --pgc-accent-inner:  rgba(196,163,90,0.65);
+  --pgc-accent-border: rgba(196,163,90,0.5);
+  --pgc-accent-tag:    rgba(196,163,90,0.45);
+  --pgc-accent-subtle: rgba(196,163,90,0.25);
+  --pgc-accent-bg:     rgba(196,163,90,0.12);
+  --pgc-accent-dim:    rgba(196,163,90,0.7);
+  --pgc-title-color:   #F5E6C8;
+  --pgc-effect-color:  #F5E6C8;
+  --pgc-desc-color:    #d4b483;
+  --pgc-bar-bg:        rgba(0,0,0,0.4);
+  --pgc-card-bg:       linear-gradient(160deg,#0d1b2a 0%,#1a3a5c 50%,#0d2137 100%);
+  --pgc-art-bg:        linear-gradient(135deg,#0d3b6e 0%,#1a6b8a 40%,#0d4a6e 70%,#082840 100%);
+}
+
+.variant-gold {
+  --pgc-accent:        #D4A017;
+  --pgc-accent-inner:  rgba(212,160,23,0.65);
+  --pgc-accent-border: rgba(212,160,23,0.5);
+  --pgc-accent-tag:    rgba(212,160,23,0.45);
+  --pgc-accent-subtle: rgba(212,160,23,0.25);
+  --pgc-accent-bg:     rgba(212,160,23,0.12);
+  --pgc-accent-dim:    rgba(212,160,23,0.7);
+  --pgc-title-color:   #FFE040;
+  --pgc-effect-color:  #FFE040;
+  --pgc-desc-color:    #c8a030;
+  --pgc-bar-bg:        rgba(0,0,0,0.5);
+  --pgc-card-bg:       linear-gradient(160deg,#1c1500 0%,#2e2000 50%,#1c1500 100%);
+  --pgc-art-bg:        linear-gradient(135deg,#3a2800 0%,#5c3d00 40%,#3a2800 70%,#1c1500 100%);
+}
+
+.variant-green {
+  --pgc-accent:        #4a8c3f;
+  --pgc-accent-inner:  rgba(74,140,63,0.65);
+  --pgc-accent-border: rgba(74,140,63,0.5);
+  --pgc-accent-tag:    rgba(74,140,63,0.45);
+  --pgc-accent-subtle: rgba(74,140,63,0.25);
+  --pgc-accent-bg:     rgba(74,140,63,0.12);
+  --pgc-accent-dim:    rgba(74,140,63,0.7);
+  --pgc-title-color:   #c8f0a0;
+  --pgc-effect-color:  #c8f0a0;
+  --pgc-desc-color:    #7ab868;
+  --pgc-bar-bg:        rgba(0,0,0,0.4);
+  --pgc-card-bg:       linear-gradient(160deg,#0a1f0a 0%,#0f2e0f 50%,#0a1f0a 100%);
+  --pgc-art-bg:        linear-gradient(135deg,#0a2e0a 0%,#1a5c1a 40%,#0a3a0a 70%,#051505 100%);
+}
+
+.variant-purple {
+  --pgc-accent:        #7c4db8;
+  --pgc-accent-inner:  rgba(124,77,184,0.65);
+  --pgc-accent-border: rgba(124,77,184,0.5);
+  --pgc-accent-tag:    rgba(124,77,184,0.45);
+  --pgc-accent-subtle: rgba(124,77,184,0.25);
+  --pgc-accent-bg:     rgba(124,77,184,0.12);
+  --pgc-accent-dim:    rgba(124,77,184,0.7);
+  --pgc-title-color:   #e0c8ff;
+  --pgc-effect-color:  #e0c8ff;
+  --pgc-desc-color:    #b09ad0;
+  --pgc-bar-bg:        rgba(0,0,0,0.4);
+  --pgc-card-bg:       linear-gradient(160deg,#13091f 0%,#220d3a 50%,#13091f 100%);
+  --pgc-art-bg:        linear-gradient(135deg,#1a0a2e 0%,#2e1a5c 40%,#1a0a3a 70%,#0a0515 100%);
+}
