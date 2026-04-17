@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    
+    <style>
+    .sn-wrap{max-width:900px;margin:0 auto;background:#1b3a6b;padding:32px 24px;position:relative;overflow:hidden;font-family:'Courier New',Courier,monospace;}
+    .sn-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(74,122,181,0.12) 1px,transparent 1px),linear-gradient(90deg,rgba(74,122,181,0.12) 1px,transparent 1px);background-size:30px 30px;pointer-events:none;}
+    .sn-title{color:#ffffff;font-size:24px;font-weight:700;letter-spacing:3px;text-transform:uppercase;margin-bottom:6px;position:relative;z-index:1;}
+    .sn-sub{color:#7aaad4;font-size:16px;letter-spacing:2px;margin-bottom:28px;position:relative;z-index:1;}
+    .sn-grid-notes{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;position:relative;z-index:1;}
+    .sn-note{padding:16px 14px 14px;position:relative;box-shadow:3px 3px 0 rgba(0,0,0,0.3);}
+    .sn-note-yellow{background:#f5e642;}
+    .sn-note-cream{background:#f0e68c;}
+    .sn-note-orange{background:#f5b942;}
+    .sn-note-green{background:#a8d8a8;}
+    .sn-note-blue{background:#a8c8e8;}
+    .sn-pin{width:10px;height:10px;border-radius:50%;background:#cc3333;position:absolute;top:-5px;left:50%;transform:translateX(-50%);box-shadow:0 1px 2px rgba(0,0,0,0.4);}
+    .sn-q{font-family:'Courier New',Courier,monospace;font-size:16px;font-weight:700;color:#333;margin-bottom:8px;border-bottom:1px solid rgba(0,0,0,0.15);padding-bottom:6px;}
+    .sn-q::before{content:'> ';}
+    .sn-a{font-family:'Courier New',Courier,monospace;font-size:16px;color:#222;line-height:1.6;}
+    .sn-rotate-1{transform:rotate(-1.5deg);}
+    .sn-rotate-2{transform:rotate(1deg);}
+    .sn-rotate-3{transform:rotate(-0.8deg);}
+    .sn-rotate-4{transform:rotate(1.5deg);}
+    .sn-rotate-5{transform:rotate(-1deg);}
+    </style>
+
+    <div class="sn-wrap">
+    <div class="sn-grid"></div>
+    <div class="sn-title">mcWankeBOT — Hardware Module Design Considerations</div>
+    <div class="sn-sub">Field Notes — REV 2026.A — Approved for Production</div>
+
+    <div class="sn-grid-notes">
+
+        <div class="sn-note sn-note-yellow sn-rotate-1">
+        <div class="sn-pin"></div>
+        <div class="sn-q">what is this?</div>
+        <div class="sn-a">Field notes from two decades of building things that beep, blink, dispense cash, and record courtroom proceedings.</div>
+        </div>
+
+        <div class="sn-note sn-note-cream sn-rotate-2">
+        <div class="sn-pin"></div>
+        <div class="sn-q">what kind of hardware?</div>
+        <div class="sn-a">Intelligent cash management systems. Professional AV hardware. Custom PCBs, FPGA implementations, MEMS microphone arrays, and lots of DSP. Also, some fun personal projects from building my smarthome.</div>
+        </div>
+
+        <div class="sn-note sn-note-orange sn-rotate-3">
+        <div class="sn-pin"></div>
+        <div class="sn-q">did you build all of this?</div>
+        <div class="sn-a">Led the engineering. Designed the systems. Sat through the board bring-ups, the smoke tests, and the certification labs. Design responsible.</div>
+        </div>
+
+        <div class="sn-note sn-note-green sn-rotate-4">
+        <div class="sn-pin"></div>
+        <div class="sn-q">what does field proven mean?</div>
+        <div class="sn-a">The products shipped. The safes held the cash. The microphones captured the record. The video switcher switched the video. Nobody called at 2am.</div>
+        </div>
+
+        <div class="sn-note sn-note-blue sn-rotate-5">
+        <div class="sn-pin"></div>
+        <div class="sn-q">how do I get more information?</div>
+        <div class="sn-a">Full bill of materials available upon request. Assembly required. Lead time: one face-to-face conversation.</div>
+        </div>
+
+    </div>
+    </div>
+
+</body>
+</html>
