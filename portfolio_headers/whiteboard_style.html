@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    
+    <style>
+    .wb-wrap{max-width:900px;margin:0 auto;background:#f0ede8;border:3px solid #c8b89a;border-radius:4px;padding:32px;position:relative;font-family:'Courier New',Courier,monospace;overflow:hidden;}
+    .wb-frame{position:absolute;inset:0;border:12px solid #8B6914;border-radius:4px;pointer-events:none;z-index:0;}
+    .wb-frame-inner{position:absolute;inset:12px;border:2px solid #a07820;border-radius:2px;pointer-events:none;}
+    .wb-tray{position:absolute;bottom:0;left:0;right:0;height:20px;background:#8B6914;display:flex;align-items:center;padding:0 20px;gap:16px;}
+    .wb-marker{width:40px;height:12px;border-radius:2px;}
+    .wb-marker-blue{background:#2244aa;}
+    .wb-marker-red{background:#aa2222;}
+    .wb-marker-black{background:#222;}
+    .wb-marker-green{background:#226622;}
+    .wb-eraser{width:30px;height:12px;background:#e8d8c8;border-radius:1px;margin-left:auto;}
+    .wb-content{position:relative;z-index:1;}
+    .wb-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:24px;}
+    .wb-title{font-family:Georgia,serif;font-size:26px;color:#1a1a2e;position:relative;display:inline-block;}
+    .wb-title::after{content:'';position:absolute;bottom:-4px;left:0;right:0;height:3px;background:#2244aa;transform:rotate(-0.5deg);}
+    .wb-date{font-size:10px;color:#666;text-align:right;line-height:1.8;border:1px solid #c8b89a;padding:6px 10px;background:rgba(255,255,255,0.5);}
+    .wb-body{display:grid;grid-template-columns:1fr 280px;gap:24px;align-items:start;}
+    .wb-section{margin-bottom:20px;}
+    .wb-section-label{font-size:9px;color:#2244aa;letter-spacing:2px;text-transform:uppercase;margin-bottom:6px;font-family:'Courier New',Courier,monospace;}
+    .wb-text{font-family:Georgia,serif;font-size:13px;color:#1a1a1a;line-height:1.8;position:relative;}
+    .wb-highlight{background:rgba(255,230,0,0.4);padding:0 2px;}
+    .wb-underline{border-bottom:2px solid #aa2222;padding-bottom:1px;}
+    .wb-circle{border:2px solid #2244aa;border-radius:50%;padding:1px 4px;white-space:nowrap;}
+    .wb-sticky{background:#f5e642;padding:12px;margin-bottom:16px;transform:rotate(1.5deg);box-shadow:2px 2px 0 rgba(0,0,0,0.15);position:relative;}
+    .wb-sticky-2{background:#a8d8a8;transform:rotate(-1deg);}
+    .wb-sticky-3{background:#f5b942;transform:rotate(0.8deg);}
+    .wb-sticky-pin{width:8px;height:8px;border-radius:50%;background:#cc3333;position:absolute;top:-4px;left:50%;transform:translateX(-50%);}
+    .wb-sticky-text{font-family:'Courier New',Courier,monospace;font-size:10px;color:#222;line-height:1.6;}
+    .wb-sticky-text strong{font-weight:700;}
+    .wb-arrow{color:#aa2222;font-size:14px;margin:0 4px;}
+    .wb-diagram{border:1px dashed #c8b89a;padding:10px;margin-top:12px;text-align:center;background:rgba(255,255,255,0.3);}
+    .wb-diagram-text{font-size:9px;color:#666;font-family:'Courier New',Courier,monospace;}
+    .wb-diagram-flow{font-size:11px;color:#2244aa;font-family:Georgia,serif;margin:6px 0;}
+    .wb-action{margin-top:16px;border-top:2px dashed #c8b89a;padding-top:12px;}
+    .wb-action-title{font-size:10px;color:#aa2222;font-weight:700;letter-spacing:1px;margin-bottom:8px;font-family:'Courier New',Courier,monospace;}
+    .wb-action-item{font-size:11px;color:#222;font-family:Georgia,serif;display:flex;align-items:flex-start;gap:8px;margin-bottom:6px;line-height:1.5;}
+    .wb-checkbox{width:12px;height:12px;border:2px solid #2244aa;flex-shrink:0;margin-top:2px;}
+    .wb-smudge{position:absolute;width:60px;height:20px;background:rgba(200,190,170,0.3);border-radius:50%;transform:rotate(-10deg);pointer-events:none;}
+    </style>
+
+    <div class="wb-wrap">
+    <div class="wb-frame"></div>
+    <div class="wb-frame-inner"></div>
+
+    <div class="wb-tray">
+        <div class="wb-marker wb-marker-blue"></div>
+        <div class="wb-marker wb-marker-red"></div>
+        <div class="wb-marker wb-marker-black"></div>
+        <div class="wb-marker wb-marker-green"></div>
+        <div class="wb-eraser"></div>
+    </div>
+
+    <div class="wb-content">
+
+        <div class="wb-header">
+        <div class="wb-title">People Engineering Portfolio</div>
+        <div class="wb-date">
+            FACILITATOR: mcWanke<br>
+            SESSION: Leadership Philosophy<br>
+            STATUS: In Progress
+        </div>
+        </div>
+
+        <div class="wb-body">
+
+        <div class="wb-main">
+            <div class="wb-section">
+            <div class="wb-section-label">// The Setup</div>
+            <div class="wb-text">
+                Every engineering leader has a deck. <span class="wb-underline">This is mine.</span> You might read "deck" and think "presentation" — <span class="wb-highlight">no.</span> This is an actual deck of skills, accomplishments, and ideas that I bring to the table.
+            </div>
+            </div>
+
+            <div class="wb-section">
+            <div class="wb-section-label">// The Philosophy</div>
+            <div class="wb-text">
+                Each card is a <span class="wb-highlight">real philosophy</span> backed by a <span class="wb-highlight">real accomplishment.</span> Think of it as a trading card collection — except instead of rare holographics, you get <span class="wb-circle">psychological safety</span> and a kudos bot.
+            </div>
+            </div>
+
+            <div class="wb-diagram">
+            <div class="wb-diagram-text">CORE EQUATION</div>
+            <div class="wb-diagram-flow">People First <span class="wb-arrow">→</span> Safe Teams <span class="wb-arrow">→</span> Major Impacts + Great Results</div>
+            <div class="wb-diagram-text">repeat until done</div>
+            </div>
+
+            <div class="wb-section" style="margin-top:16px;">
+            <div class="wb-section-label">// What Makes It Different</div>
+            <div class="wb-text">
+                Anyone can follow a framework. It takes something different to make the work <span class="wb-underline">genuinely matter</span> to the people doing it. Creativity and a true belief in the potential of the humans around me are what drive me and set me apart.
+            </div>
+            </div>
+
+            <div class="wb-action">
+            <div class="wb-action-title">ACTION ITEMS</div>
+            <div class="wb-action-item"><div class="wb-checkbox"></div>Review the cards below</div>
+            <div class="wb-action-item"><div class="wb-checkbox"></div>Find the ones that belong in your deck</div>
+            <div class="wb-action-item"><div class="wb-checkbox"></div>Let's talk</div>
+            </div>
+        </div>
+
+        <div class="wb-sidebar">
+            <div class="wb-sticky">
+            <div class="wb-sticky-pin"></div>
+            <div class="wb-sticky-text"><strong>Key belief:</strong><br>The best outcomes come from teams that feel safe, supported, and connected to the mission.</div>
+            </div>
+            <div class="wb-sticky wb-sticky-2">
+            <div class="wb-sticky-pin"></div>
+            <div class="wb-sticky-text"><strong>Not a buzzword:</strong><br>Psychological safety is how I actually operate. Every day. Not just when it's convenient.</div>
+            </div>
+            <div class="wb-sticky wb-sticky-3">
+            <div class="wb-sticky-pin"></div>
+            <div class="wb-sticky-text"><strong>Reminder:</strong><br>Communication, communication, and more communication!</div>
+            </div>
+        </div>
+
+        </div>
+    </div>
+    </div>
+
+</body>
+</html>
